@@ -1,0 +1,13 @@
+{
+  "name": "bons-altius-2023",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "live-server dist",
+    "deploy": "surge dist/ bons-altius.surge.sh"
+  },
+  "keywords": [],
+  "author": "Rumen Neshev <rstardev@abv.bg>",
+  "license": "MIT"
+}
