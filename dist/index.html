@@ -58,26 +58,44 @@
   </head>
   <body>
     <div class="main">
-      <h1 class="title">Купа Алтиус - Състезание 1-4 група деца по БОУЛДЪР</h1>
+      <h1 class="title">
+        Купа Алтиус 2024 - Състезание 1-4 група деца по БОУЛДЪР
+      </h1>
 
-      <div class="container">
-        <div class="player">
-          <div id="livestream"></div>
-        </div>
-      </div>
+      <div
+        id="container"
+        class="container"
+        style="display: flex; flex-direction: column; gap: 10px"
+      ></div>
     </div>
 
     <script type="text/javascript">
-      var options = {
-        // width: 640,
-        // height: 320,
-        width: "100%",
-        height: "100%",
-        channel: "altiusclimb",
-        parent: ["bons-altius.surge.sh"],
-      };
-      var player = new Twitch.Player("livestream", options);
-      player.setVolume(0.5);
+      const channels = ["altiusclimb"];
+
+      channels.forEach((channel) => {
+        const options = {
+          // width: 640,
+          // height: 320,
+          width: "100%",
+          height: "100%",
+          channel: channel,
+          parent: ["bons-altius.surge.sh"],
+        };
+        const livestreamId = `livestream-${channel}`;
+
+        const containerEl = document.getElementById("container");
+        const playerEl = document.createElement("div");
+        playerEl.classList.add("player");
+        containerEl.appendChild(playerEl);
+
+        const livestreamEl = document.createElement("div");
+        livestreamEl.classList.add("livestream");
+        livestreamEl.id = livestreamId;
+        playerEl.appendChild(livestreamEl);
+
+        const player = new Twitch.Player(livestreamId, options);
+        player.setVolume(0.5);
+      });
     </script>
   </body>
 </html>
