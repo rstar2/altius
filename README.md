@@ -1,5 +1,6 @@
+# Twitch live streaming
 
-## Twitch channels
+## Channels
 
-- altiusclimb  (for  rstar@gmail.com)
-- altiusclimbing  (for  altiusclimb@gmail.com)
+- altiusclimb  (email: rstar2@abv.bg)
+- altiusclimbing  (email:  altiusclimb@gmail.com)
